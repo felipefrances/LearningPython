@@ -1,4 +1,4 @@
-# LearningPhyton
+# LearningPython
 Master Python coding with structured lessons and challenges. 🐍🚀
 
 <h3>What is Python?</h3>
