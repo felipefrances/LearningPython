@@ -1,7 +1,7 @@
 # LearningPhyton
 Master Python coding with structured lessons and challenges. 🐍🚀
 
-<h3>What is Python?</h3>h
+<h3>What is Python?</h3>
 Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.
 
 It is used for:
