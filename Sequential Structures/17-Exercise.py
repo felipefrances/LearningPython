@@ -30,14 +30,24 @@ required_paint_liters = area_to_paint / COVERAGE_PER_LITER
 num_cans_needed = int(required_paint_liters * 1.1 / CAN_SIZE)
 if required_paint_liters % CAN_SIZE != 0:
     num_cans_needed += 1
+    print(f"Situation 1: You'll need {num_cans_needed} paint cans")
 
 # situation 2 (Buying only 3.6-liter gallons):
 # Calculate the number of paint gallons needed (10% buffer and rounding up)
 num_gallons_needed = int(required_paint_liters * 1.1 / GALLON_SIZE)
 if required_paint_liters % GALLON_SIZE != 0:
     num_gallons_needed += 1
+    print(f"Situation 2: You'll need {num_gallons_needed} paint gallons")
 
 # situation 3 (Mixing cans and gallons to minimize paint waste):
+num_can_mixed = int((required_paint_liters * 1.1) / CAN_SIZE)
+num_gallons_mixed = int(((required_paint_liters * 1.1) % CAN_SIZE) / GALLON_SIZE)
+if ((required_paint_liters * 1.1) % CAN_SIZE) % GALLON_SIZE != 0:
+    num_gallons_mixed += 1
+    print(f"Situation 3: You'll need {num_can_mixed} paint cans and {num_gallons_mixed} gallons")
+
+
+
 
 
 
