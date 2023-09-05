@@ -15,7 +15,7 @@ downloadTimeSeconds = fileSizeMbps / linkSpeedMbps
 downloadTimeMinutes = downloadTimeSeconds / 60
 
 # Display the estimated download time
-print("The estimated download time is approximately", 10round(downloadTimeMinutes, 2), "minutes.")
+print("The estimated download time is approximately", round(downloadTimeMinutes, 2), "minutes.")
 
 
 
