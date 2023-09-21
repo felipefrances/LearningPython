@@ -3,3 +3,4 @@ Write a program that prompts the user to enter a number from 1 to 99 and prints 
 
 number = int(input("Enter a number from 1 to 99: "))
 
+

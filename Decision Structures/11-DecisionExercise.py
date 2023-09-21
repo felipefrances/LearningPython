@@ -31,7 +31,7 @@ else:
 increase = (percent / 100) * salary
 newSalary = salary + increase
 
-print(f"The employee´s salary before was {salary};")
+print(f"The employee´s salary before was $ {salary};")
 print(f"Percentage increase applied {percent}%;")
-print(f"Amount increased {increase};")
-print(f"New employee's salary is {newSalary}.")
+print(f"Amount increased $ {increase};")
+print(f"New employee's salary is $ {newSalary}.")
