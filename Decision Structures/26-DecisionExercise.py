@@ -6,32 +6,30 @@ over 20 liters, 5% discount per liter
 Gas:
 up to 20 liters, 4% discount per liter
 over 20 liters, 6% discount per liter
-Write an algorithm that reads the number of liters sold,
-the type of fuel (coded as follows: A-alcohol, G-gasoline),
-calculate and print the amount to be paid by the customer knowing that
-the price of a liter of gasoline is R$ 2.50
+Write an algorithm that reads the number of liters sold, the type of fuel (coded as follows: A-alcohol, G-gasoline),
+calculate and print the amount to be paid by the customer knowing that the price of a liter of gasoline is R$ 2.50
 the price of a liter of alcohol is R$1.90.
 """
 
-fuel = str(input("What type of fuel do you want? Type A for alcohol and type G for gasoline \n"))
-liters = int(input("How many liters were sold \n"))
+fuel = str(input("Enter A for alcohol or G for gasoline: \n"))
+liters = int(input("Enter the number of liters: \n"))
 
 if fuel.upper() == "A":
     value = liters * 1.90
     if liters <= 20:
-        discount = value - (value * (3 / 100))
+        fee = value - (value * 0.03)
     else:
-        discount = value - (value * (5 / 100))
+        fee = value - (value * 0.05)
 
 
 elif fuel.upper() == "G":
     value = liters * 2.50
     if liters <= 20:
-        discount = value - (value * (4 / 100))
+        fee = value - (value * (4 / 100))
     else:
-        discount = value - (value * (6 / 100))
+        fee = value - (value * (6 / 100))
 
 else:
-    print("Unidentified fuel")
+    print("Invalid character.")
 
-print("Your discount is: ", discount)
+print("Fee:", fee)

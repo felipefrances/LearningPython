@@ -7,7 +7,7 @@ Build a 3x3 matrix by asking the user for its elements, and in the end, you shou
 4- The sum of the elements in the main diagonal.
 """
 
-matrix = [[0,0,0],[0,0,0],[0,0,0]]
+matrix = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 i = 0
 j = 0
 sum = 0
@@ -18,7 +18,7 @@ smallest = 0
 
 for i in range(3):
     for j in range(3):
-        matrix[i][j] = int(input())
+        matrix[i][j] = int(input(f"Enter the {[i]} {[j]} element for the matrix: "))
 
         sum += matrix[i][j]
 
