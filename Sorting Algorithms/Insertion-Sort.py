@@ -9,9 +9,5 @@ for i in range(len(lista)):
 
         lista[i] = valor
 
-
-    else:
-        continue
-
 print(lista)
 
