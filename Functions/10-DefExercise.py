@@ -44,7 +44,5 @@ while controle == 1:
             print("CRAPS! Você perdeu...")
             break
 
-
-
-
+# FALTANDO O FINAL DO CÓDIGO.
 

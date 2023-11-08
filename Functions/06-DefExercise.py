@@ -8,7 +8,10 @@
 
 
 def conversaoHoras(hora, minuto):
-    if hora >= 12:
+    if hora == 12:
+        p = "P.M"
+
+    elif hora > 12:
         hora = hora - 12
         p = "P.M"
 
