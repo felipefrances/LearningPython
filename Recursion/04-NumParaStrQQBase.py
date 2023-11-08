@@ -5,4 +5,4 @@ def deNumParaStr(n, base):
    else:
       return deNumParaStr(n // base, base) + convertString[n % base]
 
-print(deNumParaStr(10, 2))
+print(deNumParaStr(985, 16))

@@ -1,0 +1,38 @@
+Para adicionar um valor a uma célula de uma planilha usando a biblioteca openpyxl em Python, você pode seguir os passos abaixo:
+
+Importe as bibliotecas necessárias:
+
+from openpyxl import load_workbook
+
+Carregue o arquivo da planilha:
+
+caminho = 'caminho_do_arquivo.xlsx'  # Substitua pelo caminho do seu arquivo
+arquivo_excel = load_workbook(caminho)
+
+(Pode criar um arquivo também:)
+novo_arquivo_excel = Workbook()
+
+
+Acesse a planilha e defina o conteúdo da célula:
+planilha = arquivo_excel.active
+planilha['A1'] = 'Valor a ser adicionado'  # Substitua A1 pelo endereço da célula e o texto pelo valor desejado
+
+Salve as alterações:
+arquivo_excel.save(caminho)
+
+Isso adicionará o valor especificado na célula indicada da planilha.
+
+Lembre-se de substituir 'caminho_do_arquivo.xlsx' pelo caminho real do seu arquivo
+e ajustar o endereço da célula e o valor conforme necessário.
+
+
+#### Iterando sobre as linhas da planilha ####
+for linha in planilha.iter_rows(min_row=2, max_row=planilha.max_row, min_col=1, max_col=1):  # Começando da linha 2
+    # Obtendo o valor da coluna 1 (índice 0)
+    valor_coluna1 = linha[0].value
+
+    # Adicionando o valor à soma
+    soma += valor_coluna1
+
+# Exibindo a soma
+print(f'A soma da coluna 1 é: {soma}')

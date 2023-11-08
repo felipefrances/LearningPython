@@ -1,0 +1,32 @@
+
+Além dos comandos básicos que já discutimos, como adicionar valores a células e inserir cabeçalhos, aqui estão alguns outros comandos que podem ser úteis ao manipular arquivos no Excel usando a biblioteca openpyxl em Python:
+
+Ler Valores de Células:
+
+valor = planilha['A1'].value
+Isso lê o valor da célula A1.
+
+Acessar Linhas e Colunas:
+Você pode usar planilha.iter_rows() e planilha.iter_cols() para iterar sobre as linhas e colunas da planilha, respectivamente.
+
+Adicionar Linhas e Colunas:
+
+planilha.insert_rows(5, amount=3)  # Insere 3 linhas a partir da linha 5
+planilha.insert_cols(2, amount=2)  # Insere 2 colunas a partir da coluna 2
+Remover Linhas e Colunas:
+
+planilha.delete_rows(5, amount=3)  # Remove 3 linhas a partir da linha 5
+planilha.delete_cols(2, amount=2)  # Remove 2 colunas a partir da coluna 2
+Acessar Células por Coordenadas Numéricas:
+
+celula = planilha.cell(row=1, column=2)  # Acessa a célula na primeira linha e segunda coluna
+Obter Dimensões da Planilha:
+
+max_linha = planilha.max_row  # Número máximo de linhas
+max_coluna = planilha.max_column  # Número máximo de colunas
+
+Copiar Células:
+planilha['B2'] = planilha['A1'].value  # Copia o valor da célula A1 para a célula B2
+
+Estilos e Formatação:
+A biblioteca openpyxl também permite aplicar formatações, como fonte, cores, bordas, etc., a células individuais ou faixas de células.
