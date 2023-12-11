@@ -1,0 +1,55 @@
+import openpyxl
+
+*************** Carregar o arquivo Excel
+ArquivoExcel = openpyxl.load_workbook('caminhoArquivo.xlsx')
+planilha = ArquivoExcel['nomePlanilha']
+
+**************** Escrever em uma célula específica
+planilha['A1'] = 'Olá, mundo!'
+
+************* Ler Valores de Células:
+valor = planilha['A1'].value
+
+*************** Acessar Linhas e Colunas:
+coluna:
+for linha in range(2, 6):
+    print(planilha[f'A{linha}'].value)
+
+linha:
+for coluna in range(2,6):
+    print(planilha.cell(row=linhaDesejada, column=coluna).value)
+
+
+**************** Adicionar/Remover Linhas e Colunas:
+planilha.insert_rows(5, amount=3)
+planilha.insert_cols(2, amount=2)
+planilha.delete_rows(5, amount=3)
+planilha.delete_cols(2, amount=2)
+
+**************** Acessar Células por Coordenadas Numéricas:
+celula = planilha.cell(row=1, column=2)
+
+**************** Obter Dimensões da Planilha:
+max_linha = planilha.max_row  # Número máximo de linhas
+max_coluna = planilha.max_column  # Número máximo de colunas
+
+***************** Copiar Células:
+planilha['B2'] = planilha['A1'].value  # Copia o valor da célula A1 para a célula B2
+
+**************** Percorrer linhas e colunas procurando um valor (como matriz)
+for linha in range(1, 5):
+    for coluna in range(1, 5):
+        valorCelula = planilha.cell(row=linha, column=coluna).value
+        if valorCelula == valorProcurado:
+            print(f"Encontrado '{valorProcurado}' na célula ({linha}, {coluna})")
+
+****************** Adicionar nova planilha ao arquivo Excel (nova aba):
+novaPlanilha = ArquivoExcel.create_sheet(title='Nova Planilha')
+
+***************** Remover planilha:
+novaPlanilha = ArquivoExcel['Nome da Planilha']
+ArquivoExcel.remove(novaPlanilha)
+
+
+
+
